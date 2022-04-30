@@ -1,0 +1,55 @@
+{
+  "$schema": "https://raw.githubusercontent.com/microsoft/vcpkg/master/scripts/vcpkg.schema.json",
+  "name": "dang-lib",
+  "version-semver": "0.1.0",
+  "description": "A C++ library, providing a variety of useful classes focused around game development.",
+  "homepage": "https://github.com/Possseidon/dang-lib",
+  "dependencies": [
+    {
+      "name": "vcpkg-cmake",
+      "host": true
+    },
+    {
+      "name": "vcpkg-cmake-config",
+      "host": true
+    }
+  ],
+  "default-features": [
+    "gl",
+    "glfw",
+    "math",
+    "utils"
+  ],
+  "features": {
+    "gl": {
+      "description": "Include OpenGL library.",
+      "dependencies": [
+        "glad",
+        "libpng"
+      ]
+    },
+    "glfw": {
+      "description": "Include GLFW wrapper library.",
+      "dependencies": [
+        "glfw3"
+      ]
+    },
+    "lua": {
+      "description": "Include Lua wrapper library.",
+      "dependencies": [
+        {
+          "name": "lua",
+          "features": [
+            "cpp"
+          ]
+        }
+      ]
+    },
+    "math": {
+      "description": "Include math library."
+    },
+    "utils": {
+      "description": "Include utility library."
+    }
+  }
+}
