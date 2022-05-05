@@ -21,6 +21,12 @@
     "utils"
   ],
   "features": {
+    "box2d": {
+      "description": "Include Box2D wrapper library.",
+      "dependencies": [
+        "box2d"
+      ]
+    },
     "gl": {
       "description": "Include OpenGL library.",
       "dependencies": [
